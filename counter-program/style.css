@@ -1,0 +1,119 @@
+/* web-font */
+@font-face {
+    font-family: 'DepartureMono-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2409-1@1.0/DepartureMono-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'DepartureMono-Regular', Helvetica;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #ecf0f1;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+/* container */
+.container {
+    border: 5px solid #c3c3c3;
+    padding: 5px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+/*header*/
+.header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: #99d9ea;
+}
+
+.projectName{
+    font-size: 1.5em;
+    padding-left: 30px;
+    font-weight: bold;
+}
+
+.icon {
+    margin-left: auto;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.icon1, .icon2, .icon3 {
+    border: 3px solid #7f7f7f;
+    background-color: #c3c3c3;
+    text-align: center;
+    width: 25px;
+    height: 25px;
+    display: grid;
+    place-items: center;
+    color: #7f7f7f;
+    font-weight: bold;
+} 
+
+/*main*/
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border: 5px solid #e0e0e0;
+}
+
+/* countLabel (number) */
+#countLabel{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 10em;
+    color: #b5e61d;
+    will-change: transform;
+}
+
+#countLabel.bump-up {animation: up 140ms ease;}
+#countLabel.bump-down {animation: down 140ms ease;}
+@keyframes up   { 0%{transform:translateY(0)} 50%{transform:translateY(-2px)} 100%{transform:translateY(0)} }
+@keyframes down { 0%{transform:translateY(0)} 50%{transform:translateY( 2px)} 100%{transform:translateY(0)} }
+
+
+/* button design */
+#btnContainer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 10px 20px;
+}
+
+.buttons {
+    padding: 10px 20px;
+    font-size: 1.5em;
+    color: #7f7f7f;
+    border: 5px solid #99d9ea;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.25s;
+}
+
+.buttons:hover {
+    background-color: #99d9ea;
+}
+
+.buttons:active {
+    background-color: #e3dff2;
+    border-color: #e3dff2;
+    transform: translateY(2px);
+}
