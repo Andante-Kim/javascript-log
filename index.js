@@ -1,38 +1,17 @@
-// arithmetic operators = operands (values, variables, etc.)
-//                        operators (+ - * /)
-//                        ex.11 = x + 5;
+// How to accept user input
 
-let students = 30;
-
-//students = students + 1;
-//students = students - 1;
-//students = students * 2;
-//students = students / 2;
-//students = students ** 3; //exponent operators (지수 연산자)
-//students = students % 2; //remainder 나머지 나머지modulus 연산자
-
-//students += 1;
-//students -= 1;
-//students *= 2;
-//students /= 2;
-//students **= 2;
-//students %= 2;
-
-//students ++;
-//students --;
-
-//console.log(students);
+// 1. EASY WAY = window prompt
+// 2. PROFESSIONAL WAY = HTML textbox
 
 /*
-    operator precedence
-    1. parenthesis ()
-    2. exponents 
-    3. multiplication & division & modulo
-    4. addition & subtraction
+let username = window.prompt("What's your username?");
+
+console.log(username);
 */
 
-let result = 1 + 2 * 3 + 4 ** 2;
-//let result = 12 % 5 + 8 / 2;
-//let result = 6 / 2 ** (2 + 5)
+let username;
 
-console.log(result);
+document.getElementById("mySubmit").onclick = function() {
+    username = document.getElementById("myText").value;
+    document.getElementById("myH1").textContent = `Hello ${username}`;
+}
